@@ -1,0 +1,472 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    body {
+      /* display: flex;
+            min-height: 100vh; */
+      background: #ffffff;
+    }
+
+
+
+    .sidebar {
+      width: 190px;
+      height: 100vh;
+      background-color: #455A64;
+      color: white;
+      padding: 20px 10px;
+      position: fixed;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+
+    .sidebar .active {
+      color: #fdd835;
+      font-weight: bold;
+    }
+
+    .over img {
+      width: 16px;
+      margin-right: 3px;
+    }
+
+    .sidebar.hide {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      background: none;
+      width: 100%;
+      border: none;
+      color: #333;
+      margin: 0;
+      cursor: pointer;
+      z-index: 1002;
+
+    }
+
+
+
+    .close-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 10px;
+      align-self: flex-end;
+      cursor: pointer;
+    }
+
+    img.white-icon {
+      filter: brightness(0) invert(1);
+      width: 13px;
+      margin-right: 8px;
+      /* turns dark image to white */
+    }
+
+    .yellow-icon {
+      filter: brightness(0) saturate(100%) invert(84%) sepia(59%) saturate(1378%) hue-rotate(0deg) brightness(103%) contrast(102%);
+      width: 13px;
+      margin-right: 8px;
+    }
+
+    /* navbar end */
+
+
+    .main {
+      margin-left: 190px;
+      padding: 30px;
+
+    }
+
+    .card {
+      /* background-color: #ffeeaf; */
+      background-color: #fff2c2;
+      border-radius: 8px;
+      padding: 30px;
+      width: 100%;
+    }
+
+    .main h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: -20px;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding: 20px;
+
+    }
+
+
+    .info-section>div {
+      width: 48%;
+      /* make each column take equal space */
+    }
+
+    .info-group {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    .info-group strong {
+      font-weight: 600;
+      min-width: 150px;
+      /* fixes alignment */
+      display: inline-block;
+    }
+
+    .info-group span {
+      padding-left: 8px;
+    }
+
+    .info-groups {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .info-groups strong {
+      font-weight: 600;
+      min-width: 90px;
+      /* fixes alignment */
+      display: inline-block;
+    }
+
+    .info-groups span {
+      padding-left: 8px;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+
+    /* First header row (main headings like Employee Details, Earnings...) */
+    thead tr:first-child {
+      background-color: #f4d03f;
+      border-bottom: 1px solid #000;
+    }
+
+    /* Second header row (column names like Employee ID, etc.) */
+    thead tr:nth-child(2) {
+      background-color: #f4d03f;
+      /* border-top: 2px solid #000; */
+      /* border-bottom: 2px solid #000; */
+      border-bottom: none;
+    }
+
+    /* All table headers */
+    thead th {
+      border-right: 1px solid #000;
+      padding: 12px;
+      font-weight: 700;
+      border-bottom: none;
+    }
+
+    /* Remove right border for last column in both header rows */
+    thead tr th:last-child {
+      border-right: none;
+    }
+
+    /* Table body cells */
+    tbody td {
+      background-color: #ffe082;
+      /* border: 1px solid #000; */
+      border-right: 1px solid black;
+      padding: 40px;
+    }
+
+    tbody td:last-child {
+      border-right: none;
+    }
+
+    /* Table footer for total earnings */
+    tfoot td {
+      font-weight: bold;
+      text-align: right;
+      padding-top: 15px;
+      border: none;
+      background-color: transparent;
+      font-size: 1.1rem;
+    }
+
+    /* Optional: Shadow to match polished card look */
+    table {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .payslip-btn {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Common button styles */
+    .payslip-btn button {
+
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* Save Button (Yellow) */
+    .save-btn {
+      padding: 12px 40px;
+      background-color: #fdd835;
+      color: black
+    }
+
+    /* Download Button (Dark Gray) */
+    .download-btn {
+      padding: 12px 30px;
+      background-color: #37474f;
+      color: #fff;
+    }
+
+    /* Optional Hover Effects */
+    .save-btn:hover {
+      background-color: #fbc02d;
+    }
+
+    .download-btn:hover {
+      background-color: #263238;
+    }
+
+    @media(max-width:1024px) {
+      html {
+        overflow-y: scroll;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+    }
+
+    @media(max-width:768px) {
+      .main {
+        padding: 10px;
+
+      }
+
+      table {
+        font-size: 13px;
+
+      }
+
+      table th {
+        padding: 10px;
+
+      }
+
+      tbody td {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        flex-direction: column;
+      }
+
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 8px;
+        z-index: 1001;
+        background-color: grey;
+        color: black;
+        padding: 8px;
+        ;
+        margin-top: -4px;
+      }
+
+      .close-btn {
+        display: block;
+        text-align: right;
+        width: 100%;
+      }
+
+      .sidebar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: #455A64;
+        position: relative;
+        padding: 15px 10px;
+        z-index: 1000;
+      }
+
+      .sidebar.show {
+        display: flex;
+      }
+
+      .main {
+        margin-left: 0;
+        padding-top: 60px;
+        margin-top: 30px;
+      }
+
+      .menu-toggle i {
+        padding-left: 390px;
+      }
+
+      .info-section {
+        flex-direction: column;
+      }
+
+      .info-groups strong {
+        min-width: 150px;
+      }
+
+      table {
+
+        font-size: 15px;
+
+
+      }
+
+      table th {
+        padding: 5px;
+
+
+      }
+
+      tbody td {
+        padding: 25px;
+      }
+
+      .info-section>div {
+        width: 100%;
+
+      }
+
+    }
+
+    @media(max-width:426px) {
+      .main {
+        padding: 15px;
+
+      }
+
+      .card {
+        width: 400px;
+      }
+
+      table {
+
+        font-size: 10px;
+        width: 300px;
+
+      }
+
+      table th {
+        padding: 8px;
+        width: 300px;
+
+      }
+
+      tbody td {
+        padding: 30px;
+      }
+    }
+
+    @media(max-width:376px) {
+      .info-group {
+        font-size: 1rem;
+      }
+
+      .menu-toggle i {
+        padding-left: 320px;
+      }
+
+      .card {
+        margin-left: -10px;
+        width: 360px;
+      }
+
+      table {
+
+        font-size: 9px;
+
+
+      }
+
+      table th {
+        padding: 8px;
+
+
+      }
+
+      tbody td {
+        padding: 27px;
+      }
+    }
+
+    @media(max-width:320px) {
+      .info-group {
+        font-size: 0.8rem;
+      }
+
+      .info-groups {
+        font-size: 0.8rem;
+      }
+
+      .menu-toggle i {
+        padding-left: 280px;
+      }
+
+      .card {
+        margin-left: -10px;
+        width: 310px;
+      }
+
+      table {
+        font-size: 10px;
+      }
+
+      table th {
+        padding: 8px;
+      }
+
+      tbody td {
+        padding: 30px;
+      }
+
+    }

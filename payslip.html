@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payslip</title>
+  <!-- boxicon link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- fontawsome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- quick sand font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <!-- stylesheet link -->
+  <link rel="stylesheet" href="assets/css/payslip.css">
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <a href="overview.html"><img src="assets/images/Overview.png" class="white-icon">Overview</a>
+    <a href="payroll.html"><img src="assets/images/Payroll.png" class="white-icon">Payroll</a>
+    <a href="payslip.html" class="active"><img src="assets/images/Payroll.png" class="yellow-icon">Payslip</a>
+  </div>
+  <!-- Main Content -->
+
+  <div class="main">
+    <h2 style="text-align: center; margin-top: 20px;">Payslip Details</h2>
+    <div id="payslipContent">
+      <div class="card">
+
+        <div class="info-section">
+          <div>
+            <div class="info-group"><strong>Employee Name</strong>: <span id="empName"></span></div>
+            <div class="info-group"><strong>Employee I’D</strong>: <span id="empId"></span></div>
+            <div class="info-group"><strong>Role</strong>: <span id="empRole"></span></div>
+          </div>
+          <div>
+            <div class="info-groups"><strong>Date</strong>: <span id="date"></span></div>
+            <div class="info-groups"><strong>Month</strong>: <span id="month"></span></div>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Employee Details</th>
+                <th colspan="2">Earnings</th>
+                <th>Additions</th>
+                <th>Deductions</th>
+              </tr>
+              <tr>
+                <th>Employee I’d</th>
+                <th>Employee Name</th>
+                <th>Basic salary</th>
+                <th>Total Salary</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="payslipTableBody"></tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 20px; text-align: right;margin-right: 20px;">
+          <strong>Total Earnings: ₹ <span id="totalEarnings">0</span></strong>
+        </div>
+
+        <div class="payslip-btn">
+          <button class="save-btn">Save</button>
+          <button class="download-btn">Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="assets/js/payslip.js"> </script>
+</body>
+
+</html>
