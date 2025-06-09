@@ -138,3 +138,28 @@
       }
     });
   });
+
+  function loadStoredMeetings() {
+    let stored = JSON.parse(localStorage.getItem(storageKey));
+    
+    if (!stored || stored.length === 0) {
+        stored = [
+            {
+                title: "Client Meeting",
+                time: "10.00 AM",
+                weekday: "Wed",
+                shortDate: "May 17"
+            },
+            {
+                title: "Team Meeting",
+                time: "11.00 AM",
+                weekday: "Wed",
+                shortDate: "May 17"
+            }
+        ];
+        localStorage.setItem(storageKey, JSON.stringify(stored));
+    }
+
+    stored.forEach(meeting => appendMeetingToUI(meeting));
+}
+
